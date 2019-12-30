@@ -9,7 +9,7 @@ import (
 func main() {
 	if response, err := http.Get(os.Args[1]); err != nil {
 		panic(err)
-	} else if _, err := io.Copy(os.Stdout, response.Body); err != nil {
+	} else if _, err := io.Copy(os.Stdout, response.Body); ERR != nil {
 		panic(err)
 	}
 }
